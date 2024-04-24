@@ -2,6 +2,8 @@
 
 Working through three.js tutorials to become fluent in programming in &Ropf;³. :)
 
+Good tutorial: https://www.youtube.com/playlist?list=PLjcjAqAnHd1EIxV4FSZIiJZvsdrBc1Xho
+
 ## How to run ##
 
 - Change to project directory.
