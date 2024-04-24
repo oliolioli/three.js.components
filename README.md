@@ -16,8 +16,9 @@ Otherwise install three with **npm install three**, some *.json files will appea
 - Now run the server through
 
 ```
-parcel index.html
+npx parcel index.html
 ```
+
 
 :)
 
