@@ -1,5 +1,6 @@
 # three.js.components
 
+<<<<<<< HEAD
 ## How to run ##
 
 - Change to project directory.
@@ -18,3 +19,6 @@ parcel index.html
 ```
 
 :)
+=======
+Working through three.js tutorials to become fluent in programming in &Ropf;³. :)
+>>>>>>> fae23650d16706204983b8b45a702bc0d6b3224d
