@@ -18,9 +18,12 @@ Otherwise install three with **npm install three**, some *.json files will appea
 - Now run the server through
 
 ```
-npx parcel index.html
+parcel index.html js/
 ```
 
+(If you encounter problems with hotloading, then ensure to include all files as an argument: parcel index.html foo.html foo.script ...)
+
+See: https://parceljs.org/features/cli/
 
 :)
 
