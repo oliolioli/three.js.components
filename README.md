@@ -13,15 +13,17 @@ Good tutorial: https://www.youtube.com/playlist?list=PLjcjAqAnHd1EIxV4FSZIiJZvsd
 npm list
 ```
 
-We use parcel as a almost zero config build tool.
-
-- Install parcel:
+We use parcel as a almost zero config build tool. Install parcel:
 
 ```
-npm i parcel
+npm install parcel
 ```
 
-- Install three with **npm install three**
+Install three with 
+
+```
+npm install three
+```
 
 - Ensure to add "source": "index.html" in the package.json file of your project.
 
