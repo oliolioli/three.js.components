@@ -33,5 +33,10 @@ npm install three
 parcel
 ```
 
+Parcel will announce "Server running at http://localhost:1234"
+
+
+
+## Further documentation ##
 (See: https://parceljs.org/features/cli)
 
