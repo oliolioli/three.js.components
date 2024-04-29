@@ -27,7 +27,7 @@ orbit.update();
 
 
 const boxGeometry = new THREE.BoxGeometry();
-const boxMaterial = new THREE.MeshBasicMaterial({color: 0x00FF00});
+const boxMaterial = new THREE.MeshBasicMaterial({color: 0x00CCDF});
 const box = new THREE.Mesh(boxGeometry, boxMaterial);
 
 scene.add(box);
@@ -38,7 +38,8 @@ const plane = new THREE.Mesh(planeGeometry, planeMaterial);
 
 scene.add(plane);
 
-plane.rotation.x = -0.5 * 3.1415;
+//plane.rotation.x = -0.5 * 3.1415;
+plane.rotation.x = -0.5 * Math.PI;
 
 const gridHelper = new THREE.GridHelper(30);
 scene.add(gridHelper);
