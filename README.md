@@ -13,7 +13,7 @@ Good tutorial: https://www.youtube.com/playlist?list=PLjcjAqAnHd1EIxV4FSZIiJZvsd
 npm list
 ```
 
-Otherwise install three with **npm install three**, some *.json files will appear in the project directory.
+Otherwise install three with **npm install three**
 
 - Ensure to add "source": "index.html" in the package.json file of your project.
 
