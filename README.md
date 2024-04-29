@@ -13,13 +13,13 @@ Good tutorial: https://www.youtube.com/playlist?list=PLjcjAqAnHd1EIxV4FSZIiJZvsd
 npm list
 ```
 
-We use parcel as a almost zero config build tool. Install parcel:
+We use _parcel_ as a almost zero config build tool. Install parcel:
 
 ```
 npm install parcel
 ```
 
-Install three with 
+Install _three_ with 
 
 ```
 npm install three
