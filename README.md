@@ -15,15 +15,13 @@ npm list
 
 Otherwise install three with **npm install three**, some *.json files will appear in the project directory.
 
-- Now run the server through
+- Ensure to add "source": "index.html" in the package.json file of your project.
+
+- Now run the server through with a simple parcel command in your project directory:
 
 ```
-parcel index.html js/
+parcel
 ```
 
-(If you encounter problems with hotloading, then ensure to include all files as an argument: parcel index.html foo.html foo.script ...)
-
-See: https://parceljs.org/features/cli/
-
-:)
+(See: https://parceljs.org/features/cli)
 
