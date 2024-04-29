@@ -4,16 +4,24 @@ Working through three.js tutorials to become fluent in programming in &Ropf;³. 
 
 Good tutorial: https://www.youtube.com/playlist?list=PLjcjAqAnHd1EIxV4FSZIiJZvsdrBc1Xho
 
+
 ## How to run ##
 
-- Change to project directory.
-- Check if three is installed:
+- Check if three.js and parcel are installed:
 
 ```
 npm list
 ```
 
-Otherwise install three with **npm install three**
+We use parcel as a almost zero config build tool.
+
+- Install parcel:
+
+```
+npm i parcel
+```
+
+- Install three with **npm install three**
 
 - Ensure to add "source": "index.html" in the package.json file of your project.
 
