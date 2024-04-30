@@ -7,16 +7,18 @@ Good tutorial: https://www.youtube.com/playlist?list=PLjcjAqAnHd1EIxV4FSZIiJZvsd
 
 ## How to run ##
 
+[See: https://parceljs.org/getting-started/webapp/]
+
 - Check if three.js and parcel are installed:
 
 ```
 npm list
 ```
 
-We use _parcel_ as a almost zero config build tool. Install parcel:
+We use _parcel_ as a almost zero config build tool. Install parcel in your working directory:
 
 ```
-npm install parcel
+npm install --save-dev parcel
 ```
 
 Install _three_ with 
@@ -30,10 +32,10 @@ npm install three
 - Now run the server through with a simple parcel command in your project directory:
 
 ```
-parcel
+npx parcel index.html 
 ```
 
-Parcel will announce "Server running at http://localhost:1234"
+Parcel will announce "Server running at http://localhost:1234" and will hotload all your changes immediately.
 
 
 
