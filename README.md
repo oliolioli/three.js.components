@@ -37,6 +37,8 @@ Parcel will announce "Server running at http://localhost:1234" and will hotload 
 
 ## What we need furthermore ##
 
+(dat.gui)[https://github.com/dataarts/dat.gui] - A lightweight graphical user interface for changing variables in JavaScript.
+
 ```
 npm install dat.gui
 ```
