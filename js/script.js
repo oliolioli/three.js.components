@@ -4,6 +4,9 @@ import * as dat from 'dat.gui';
 
 const renderer = new THREE.WebGLRenderer();
 
+renderer.shadowMap.enabled = true;
+
+
 renderer.setSize(window.innerWidth, window.innerHeight);
 
 document.body.appendChild(renderer.domElement);
@@ -34,7 +37,7 @@ const box = new THREE.Mesh(boxGeometry, boxMaterial);
 scene.add(box);
 
 const planeGeometry = new THREE.PlaneGeometry(30, 30);
-const planeMaterial = new THREE.MeshBasicMaterial({
+const planeMaterial = new THREE.MeshStandardMaterial({
   color: 0xFFFFFF,
   side: THREE.DoubleSide
 });
@@ -44,6 +47,7 @@ const plane = new THREE.Mesh(planeGeometry, planeMaterial);
 scene.add(plane);
 
 plane.rotation.x = -0.5 * Math.PI;
+plane.receiveShadow = true;
 
 const gridHelper = new THREE.GridHelper(30,100);
 scene.add(gridHelper);
@@ -55,20 +59,30 @@ const sphereMaterial = new THREE.MeshStandardMaterial({
 });
 const sphere = new THREE.Mesh(sphereGeometry,sphereMaterial);
 scene.add(sphere);
-
-sphere.position.set(-10, 10, 10);
+sphere.position.set(-5, 5, 5);
+sphere.castShadow = true;
 
 const gui = new dat.GUI();
 
 const ambientLight = new THREE.AmbientLight(0x333333);
 scene.add(ambientLight);
 
-const directionalLight = new THREE.DirectionalLight(0xFFFFFF, 0.8);
+const directionalLight = new THREE.DirectionalLight(0xFFFFFF, 1.2);
 scene.add(directionalLight);
 directionalLight.position.set(-30, 50, 0);
+directionalLight.castShadow = true;
+directionalLight.shadow.camera.bottom = -20;
+directionalLight.shadow.camera.top = 20;
+directionalLight.shadow.camera.right = 20;
+directionalLight.shadow.camera.left = -20;
+
 
 const dLightHelper = new THREE.DirectionalLightHelper(directionalLight, 5);
 scene.add(dLightHelper);
+
+const dLightShadowHelper = new THREE.CameraHelper(directionalLight.shadow.camera);
+scene.add(dLightShadowHelper);
+
 
 const options = {
   sphereColor: '#ffea00',
@@ -101,7 +115,7 @@ function animate() {
 
   step += options.speed;
 
-  sphere.position.y = 10 * Math.abs(Math.sin(step));
+  sphere.position.y = 20 * Math.abs(Math.sin(step));
 
   renderer.render(scene, camera);
 }
