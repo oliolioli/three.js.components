@@ -48,5 +48,5 @@ npm install dat.gui
 See: https://parceljs.org/getting-started/webapp/ for details concerning installation and https://parceljs.org/features/cli for CLI commands.
 
 ## Known problems / workarounds in three.js
-
-**- Objects do not appear to be correctly illuminated?** Try both materials: MeshBasicMaterial and MeshStandardMaterial. 
+  
+**- Objects do not appear to be correctly illuminated?** Try change their materials from/to MeshBasicMaterial or MeshStandardMaterial or vice versa.
