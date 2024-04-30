@@ -35,19 +35,6 @@ npx parcel index.html
 
 Parcel will announce "Server running at http://localhost:1234" and will hotload all your changes immediately.
 
-### Killing node 
-If you killed node but it seems to still run somehow, you might search it:  
-
-
-```
-ps aux | grep node
-```
-and kill it:
-
-
-```
-kill -9 PROCESS_ID
-```
 
 ## What we need furthermore ##
 
@@ -61,6 +48,20 @@ npm install dat.gui
 
 See: https://parceljs.org/getting-started/webapp/ for details concerning installation and https://parceljs.org/features/cli for CLI commands.
 
-## Known problems / workarounds in three.js
+## Known problems / workarounds
   
 **- Objects do not appear to be correctly illuminated?** Try change their materials from/to MeshBasicMaterial or MeshStandardMaterial or vice versa.
+
+**- Killing node**
+If you killed node but it seems to still run somehow, you might search it:  
+
+
+```
+ps aux | grep node
+```
+and kill it:
+
+
+```
+kill -9 PROCESS_ID
+```
