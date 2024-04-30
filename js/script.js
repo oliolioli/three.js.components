@@ -27,21 +27,20 @@ orbit.update();
 
 
 const boxGeometry = new THREE.BoxGeometry();
-const boxMaterial = new THREE.MeshBasicMaterial({color: 0x00CCDF});
+const boxMaterial = new THREE.MeshBasicMaterial({color: 0xFFFFFF});
 const box = new THREE.Mesh(boxGeometry, boxMaterial);
 
 scene.add(box);
 
-const planeGeometry = new THREE.PlaneGeometry(30, 30);
-const planeMaterial = new THREE.MeshBasicMaterial({color: 0xFFFFFF});
+const planeGeometry = new THREE.PlaneGeometry(40, 40);
+const planeMaterial = new THREE.MeshBasicMaterial({color: 0x2233FF});
 const plane = new THREE.Mesh(planeGeometry, planeMaterial);
 
 scene.add(plane);
 
-//plane.rotation.x = -0.5 * 3.1415;
-plane.rotation.x = -0.5 * Math.PI;
+plane.rotation.x = 0.5 * Math.PI;
 
-const gridHelper = new THREE.GridHelper(30);
+const gridHelper = new THREE.GridHelper(40);
 scene.add(gridHelper);
 
 
