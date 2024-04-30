@@ -35,7 +35,11 @@ npx parcel index.html
 
 Parcel will announce "Server running at http://localhost:1234" and will hotload all your changes immediately.
 
+## What we need furthermore ##
 
+```
+npm install dat.gui
+```
 
 ## Further documentation ##
 
