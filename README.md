@@ -7,8 +7,6 @@ Good tutorial: https://www.youtube.com/playlist?list=PLjcjAqAnHd1EIxV4FSZIiJZvsd
 
 ## How to run ##
 
-[See: https://parceljs.org/getting-started/webapp/]
-
 - Check if three.js and parcel are installed:
 
 ```
@@ -40,5 +38,6 @@ Parcel will announce "Server running at http://localhost:1234" and will hotload 
 
 
 ## Further documentation ##
-(See: https://parceljs.org/features/cli)
+
+See: https://parceljs.org/getting-started/webapp/ for details concerning installation and https://parceljs.org/features/cli for CLI commands.
 
