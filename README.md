@@ -35,6 +35,20 @@ npx parcel index.html
 
 Parcel will announce "Server running at http://localhost:1234" and will hotload all your changes immediately.
 
+### Killing node 
+If you killed node but it seems to still run somehow, you might search it:  
+
+
+```
+ps aux | grep node
+```
+and kill it:
+
+
+```
+kill -9 PROCESS_ID
+```
+
 ## What we need furthermore ##
 
 [dat.gui](https://github.com/dataarts/dat.gui) - A lightweight graphical user interface for changing variables in JavaScript.
