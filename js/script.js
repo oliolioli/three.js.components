@@ -67,7 +67,7 @@ const gui = new dat.GUI();
 const ambientLight = new THREE.AmbientLight(0x333333);
 scene.add(ambientLight);
 
-const directionalLight = new THREE.DirectionalLight(0xFFFFFF, 1.2);
+/*const directionalLight = new THREE.DirectionalLight(0xFFFFFF, 1.2);
 scene.add(directionalLight);
 directionalLight.position.set(-30, 50, 0);
 directionalLight.castShadow = true;
@@ -82,12 +82,23 @@ scene.add(dLightHelper);
 
 const dLightShadowHelper = new THREE.CameraHelper(directionalLight.shadow.camera);
 scene.add(dLightShadowHelper);
+*/
 
+
+const spotLight = new THREE.SpotLight(0xFFFFFF);
+scene.add(spotLight);
+
+spotLight.position.set(-100, 100, 0);
+spotLight.castShadow = true;
+spotLight.angle = 0.2; 
+
+const sLightHelper = new THREE.SpotLightHelper(spotLight);
+scene.add(sLightHelper);
 
 const options = {
   sphereColor: '#ffea00',
   planeColor: '#ffffff',
-  wireframe: true,
+  wireframe: false,
   speed: 0.01
 };
 
