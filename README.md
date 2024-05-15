@@ -54,7 +54,7 @@ See: https://parceljs.org/getting-started/webapp/ for details concerning install
 
 Try change their materials from/to MeshBasicMaterial or MeshStandardMaterial or vice versa.
 
-**- Killing node**
+**- Killing Node **
 
 If you killed node but it seems to still run somehow, you might search it:  
 
