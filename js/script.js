@@ -2,6 +2,8 @@ import * as THREE from 'three';
 import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls.js';
 import * as dat from 'dat.gui';
 
+import stars from '../src/space.jpg';
+
 const renderer = new THREE.WebGLRenderer();
 
 renderer.shadowMap.enabled = true;
@@ -55,7 +57,7 @@ scene.add(gridHelper);
 const sphereGeometry = new THREE.SphereGeometry(4, 50, 50);
 const sphereMaterial = new THREE.MeshStandardMaterial({
   color: 0x0000FF,
-  wireframe: true
+  wireframe: false 
 });
 const sphere = new THREE.Mesh(sphereGeometry,sphereMaterial);
 scene.add(sphere);
@@ -97,6 +99,10 @@ const sLightHelper = new THREE.SpotLightHelper(spotLight);
 scene.add(sLightHelper);
 */
 
+scene.fog = new THREE.Fog(0xFFFFFF, 0, 200);
+
+const textureLoader = new THREE.TextureLoader();
+scene.background = textureLoader.load(stars);
 
 const options = {
   sphereColor: '#ffea00',
@@ -121,7 +127,16 @@ gui.add(options, 'speed', 0, 0.1);
 
 let step = 0;
 
+const mousePosition = new THREE.Vector2();
 
+window.addEventListener('mouvemove', function(e) {
+  mousePosition.x = (e.clientX / window.innerWidth) * 2 -1;
+  mousePosition.y = (e.clientY / window.innerHeight) * 2 + 1;
+});
+
+const rayCaster = new THREE.Raycaster();
+
+const sphereId = sphere.id;
 
 function animate() {
   box.rotation.x += 0.01;
@@ -130,6 +145,16 @@ function animate() {
   step += options.speed;
 
   sphere.position.y = 20 * Math.abs(Math.sin(step));
+
+  rayCaster.setFromCamera(mousePosition, camera);
+  const intersects = rayCaster.intersectObjects(scene.children);
+  console.log(intersects);
+
+  for(let i = 0; i < intersects.length; i++) {
+    if (intersects[i].object.id === sphereId)
+      intersects[i].object.material.color.set(0xFF0000);
+  }
+
 
   renderer.render(scene, camera);
 }
