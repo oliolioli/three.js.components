@@ -27,7 +27,7 @@ npm install three
 
 - Ensure to add "source": "index.html" in the package.json file of your project.
 
-- Now run the server through with a simple parcel command in your project directory:
+- Now **run the server** through with a simple parcel command in your project directory:
 
 ```
 npx parcel index.html 
